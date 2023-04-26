@@ -151,6 +151,85 @@ u soon`
 console.log(t);
 
 
+//js (basics 3)
+
+let a='sourik';
+console.log(typeof(a)); //string type
+let b=new String('babbar');
+console.log(typeof(b)); //object type
+
+//date & time object
+//methods from pdf notes or mdn
+let date=new Date();
+console.log(date);
+let date2=new Date('2023','3','28','20');
+console.log(date2);
+
+
+//arrays
+let arr=[96,47,33,39,54];
+
+//insertion
+arr.push(10); //adding at the last
+arr.unshift(15); //adding at the first
+arr.splice(2,0,31,32); //specific position
+
+//deletion
+arr.pop(); //delete from end
+arr.shift() //delete from begin
+arr.splice(1,3); //delete from specific position
+arr.length=0; //emptying an array
+arr.splice(0,arr.length); //alternative empty
+
+console.log(arr);
+console.log(arr.indexOf(39)); //element found
+console.log(arr.indexOf(40)); //element not found
+console.log(arr.indexOf(96,2));
+console.log(arr.indexOf(96,1));
+
+//alternative way to search
+console.log(arr.includes(32));
+
+//array object/reference
+let arr=[
+  {no:1,name:'love'},
+  {no:2,name:'babbar'}
+];
+console.log(arr);
+console.log(arr.indexOf({no:1,name:'love'})); //different references
+
+
+let arr=[
+  {no:1,name:'love'},
+  {no:2,name:'babbar'}
+];
+let op1=arr.find(function(value){ return value.name='babbar';}) //callbackfunction1(predicate function)
+let op2=arr.find(function(value){ return value.name='love'; }) //callbackfunction2(predicate function)
+
+//shortcut method->arrow function
+let op3=arr.find(op3=>op3.no==3); //undefined
+console.log(op3);
+let op4=arr.find(op4=>op4.no==2); //undefined
+console.log(op4);
+
+
+//concat
+let a=[1,2,3,4];
+let b=[1,2,3,4];
+let c=a.concat(b);
+
+
+
+
+
+
+
+
+
+
+ 
+
+
 
 
 
