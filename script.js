@@ -34,4 +34,93 @@ console.log(r.draw());
 console.log(r['length']);
 r.paint();
 
+//factory fucntions
+// function createR(){   //using factory functions
+//                       //no input pararmeter
+//   let r={                   //let -> type, r->variable
+//   length:10,breadth:5,    // length,breadth -> property key
+//   draw:function(){        //draw() -> method
+//     console.log('Drawing');
+//     }
+//   };
+//   return r;
+// }
+// let x=new createR();
+// console.log(x);
+// x.draw();
+
+// x.erase=function(){  //adding methods outside the function
+//   console.log("Erase rectangle");
+// }
+// x.erase();
+
+// delete x.erase; // deleted x.erase method()
+// // x.erase(); //na bcoz erase() method is eliminated in the prev line.
+
+function createR(len,wid){   //using factory functions
+                              //yes input pararmeter
+  return r={                   //let -> type, r->variable
+   length:len,breadth:wid,    // length,breadth -> property key
+   draw:function(){        //draw() -> method
+     console.log('Drawing');
+     }
+  };
+  // return r;
+}
+let x=createR(5,6);
+console.log(x);
+
+
+
+//constructor functions
+
+function Rectangle(a,b){
+  this.length=a;
+  this.breadth=b;
+  this.perimeter=2*(a+b);
+  this.draw=function(){console.log('drawing')};
+}
+
+let r=new Rectangle(10,20);
+console.log(r);
+r.draw();
+
+
+//pass by value VS pass by reference
+
+// increment(a){a++;}  //pass by value
+// let a=10;
+// increment(a);
+// console.log(a);
+
+// let a={value:10};  //pass by reference
+// incr(a){a.value++;}
+// incr(a);
+// console.log(a);
+
+
+//For-In loop
+let r={
+  length:10,breadth:5
+}
+for(let key in r){ 
+  console.log(key,r[key]);
+}
+
+
+//FOR-OF LOOP
+// for(let key of r){ //object r is not iterable
+//   console.log(key,r[key]);
+// }
+
+ for(let key of Object.entries(r)){ 
+   console.log(key);}
+//   [ 'length', 10 ]
+// [ 'breadth', 5 ]
+ for(let key of Object.keys(r)){ 
+   console.log(key);} //length breadth
+   
+
+
+
 
