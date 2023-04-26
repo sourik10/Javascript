@@ -120,7 +120,7 @@ for(let key in r){
  for(let key of Object.keys(r)){ 
    console.log(key);} //length breadth
    
-
+//cloning(iteration/object/spread)
 //iteration cloning
 let src={ abc:10,def:20,pqr:30 };
 let dest={};
@@ -138,6 +138,19 @@ console.log(dest);
 let src={ abc:10,def:20,pqr:30 };
 let dest={...src};
 console.log(dest);
+
+//string methods
+let x='good morning';
+let y=x.split('');
+console.log(y);
+
+//template literals
+let t=`hii good night
+see
+u soon`
+console.log(t);
+
+
 
 
 
