@@ -121,6 +121,29 @@ for(let key in r){
    console.log(key);} //length breadth
    
 
+//iteration cloning
+let src={ abc:10,def:20,pqr:30 };
+let dest={};
+for(let key in src){
+  dest[key]=src[key];
+}
+console.log(dest);
+
+//object cloning
+let src={ abc:10,def:20,pqr:30 };
+let dest=Object.assign({},src);
+console.log(dest);
+
+//spread cloning
+let src={ abc:10,def:20,pqr:30 };
+let dest={...src};
+console.log(dest);
+
+
+
+
+
+
 
 
 
