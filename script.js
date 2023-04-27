@@ -218,24 +218,13 @@ let a=[1,2,3,4];
 let b=[1,2,3,4];
 let c=a.concat(b);
 
+//sort in arrays
+let arr=[13,34,45,23,11];
+let st=arr.sort(function(a,b){return a-b;}); //ascending order
+console.log(st);
 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
+//filtering in arrays
+let arr=[13,34,45,-23,-11];
+let st=arr.filter(function(x){return x>=0;});  //arr.filter(value => value>=0 );
+console.log(st);
 
